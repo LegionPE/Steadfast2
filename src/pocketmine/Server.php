@@ -2355,4 +2355,7 @@ class Server{
 		$this->players = $random;
 	}
 
+	public function getQueryInformation(){
+		return $this->queryRegenerateTask;
+	}
 }
