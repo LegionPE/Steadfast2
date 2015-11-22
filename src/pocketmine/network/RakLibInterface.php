@@ -60,9 +60,9 @@ class RakLibInterface implements ServerInstance, AdvancedSourceInterface{
 	/** @var ServerHandler */
 	private $interface;
 
-	public $count = 0;
-	public $maxcount = 31360;
-	public $name = "Lifeboat Network";
+	public $count = 1;
+	public $maxcount = 200;
+	public $name = "§bLegionPE§a Theta";
 
 	public function setCount($count, $maxcount) {
 		$this->count = $count;
