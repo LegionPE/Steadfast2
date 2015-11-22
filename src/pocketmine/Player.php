@@ -3174,6 +3174,17 @@ class Player extends Human implements CommandSender, InventoryHolder, IPlayer{
 			$this->dataPacket($pk);
 		}
 	}
+	
+	public function setMaxHealth($h){
+		parent::setMaxHealth($h);
+		$pk = new UpdateAttributesPacket();
+		$this->foodTick = 0;
+		$pk->minValue = 0;
+		$pk->maxValue = $h;
+		$pk->value = $this->getHealth();
+		$pk->name = UpdateAttributesPacket::HEALTH;
+		$this->dataPacket($pk);
+	}
 
 	private $hunger = 20;
 
